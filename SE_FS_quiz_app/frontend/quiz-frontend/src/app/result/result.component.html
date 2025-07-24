@@ -1,0 +1,29 @@
+<div class="result-container">
+  <h2 *ngIf="playerName">🎉 Congratulations, {{ playerName }}! 🏆</h2>
+  <p *ngIf="score >= 0">Your final score: <strong>{{ score }}</strong> 🔥</p>
+  <p *ngIf="appreciationMessage">{{ appreciationMessage }}</p>
+  
+  <!-- Leaderboard Section -->
+  <div class="leaderboard-box">
+    <h3>Leaderboard</h3>
+    <table class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of leaderboard">
+          <td>{{ entry.username }}</td>
+          <td>{{ entry.score }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Play Again Button (Below Leaderboard) -->
+  <div class="play-again-container">
+    <button (click)="restartQuiz()" class="play-again-button">🔄 Play Again</button>
+  </div>
+</div>

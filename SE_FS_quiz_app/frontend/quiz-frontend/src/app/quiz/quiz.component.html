@@ -1,0 +1,35 @@
+<div class="quiz-container">
+  <!-- Welcome Screen -->
+  <div *ngIf="!quizStarted" class="welcome-box">
+    <h2>🌟 Welcome to the Ultimate Quiz Challenge! 🏆</h2>
+    <p>Test your knowledge and aim for a perfect score! 🚀</p>
+    <input [(ngModel)]="playerName" placeholder="Enter your name" class="name-input">
+    <button (click)="startQuiz()" class="start-button">🎯 Start Quiz</button>
+  </div>
+
+  <!-- Quiz in Progress -->
+  <div *ngIf="quizStarted && !quizFinished">
+    <div class="quiz-header">
+      <p class="left">⏳ Time Left: <span>{{ timer }}</span> seconds</p>
+      <p class="right">📖 Question {{ currentQuestionIndex + 1 }}/5</p>
+    </div>
+    
+    <div class="question-box">
+      <h3>{{ currentQuestion?.text }}</h3>
+    </div>
+    
+    <div class="options-container">
+      <ul>
+        <li *ngFor="let option of currentQuestion?.options"
+            [ngClass]="{
+              'option-box': true,
+              'wrong': selectedAnswer && (option === selectedAnswer) && (selectedAnswer !== currentQuestion.correct),
+              'correct': selectedAnswer && (option === currentQuestion.correct)
+            }"
+            (click)="checkAnswer(option)">
+          {{ option }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

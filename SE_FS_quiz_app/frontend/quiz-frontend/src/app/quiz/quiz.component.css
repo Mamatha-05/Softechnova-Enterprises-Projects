@@ -1,0 +1,101 @@
+/* Quiz Container Styles */
+.quiz-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Welcome Box styled to be large, centered, and bold */
+.welcome-box {
+  border: 3px solid #007bff;
+  padding: 40px;
+  margin: 40px auto;
+  width: 500px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  background-color: #e8f4ff; /* Light blue accent */
+}
+
+.welcome-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0056b3;
+}
+
+.welcome-box p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Input Field & Button */
+.name-input {
+  padding: 10px;
+  width: calc(100% - 20px);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+}
+
+.start-button {
+  padding: 12px 25px;
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Quiz Header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Question Box */
+.question-box {
+  margin-bottom: 30px;
+}
+
+.question-box h3 {
+  font-size: 1.8rem;
+}
+
+/* Options List Styles */
+.options-container ul {
+  padding: 0;
+  list-style: none;
+}
+
+.option-box {
+  padding: 15px;
+  margin: 8px 0;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.option-box:hover {
+  background-color: #e0e0e0;
+}
+
+/* Strong highlight for wrong selection */
+.wrong {
+  background-color: #ff0000 !important;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Strong highlight for correct answer */
+.correct {
+  background-color: #008000 !important;
+  color: #ffffff;
+  font-weight: bold;
+}

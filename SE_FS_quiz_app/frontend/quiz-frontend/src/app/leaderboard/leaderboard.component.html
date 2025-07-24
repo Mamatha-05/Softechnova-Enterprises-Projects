@@ -1,0 +1,16 @@
+<div class="leaderboard-container">
+  <h2>🏆 Leaderboard</h2>
+  <table *ngIf="leaderboard.length > 0">
+    <tr>
+      <th>Rank</th>
+      <th>Username</th>
+      <th>Score</th>
+    </tr>
+    <tr *ngFor="let player of leaderboard; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ player.username }}</td>
+      <td>{{ player.score }}</td>
+    </tr>
+  </table>
+  <p *ngIf="leaderboard.length === 0">No scores yet! Play a quiz to see rankings.</p>
+</div>

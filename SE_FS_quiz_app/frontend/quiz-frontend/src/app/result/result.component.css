@@ -1,0 +1,51 @@
+/* Container styling for result page */
+.result-container {
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  font-size: 1.3rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Leaderboard Box */
+.leaderboard-box {
+  margin: 30px auto;
+  border: 3px solid #ccc;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Play Again Button Styling */
+.play-again-container {
+  margin-top: 30px;
+}
+
+.play-again-button {
+  padding: 12px 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.play-again-button:hover {
+  background-color: #0056b3;
+}
